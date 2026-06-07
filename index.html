@@ -1,675 +1,275 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Barbara's Elegance Stitches — Bespoke Fashion Studio | Circular Showcase</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #FFFFFF;
-      color: #1E1E1E;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(12px);
-      padding: 16px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      border-bottom: 1px solid #F0EBE6;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #B4523C, #7A281C);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .logo i {
-      color: #B4523C;
-      margin-right: 6px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #2C2C2C;
-      font-size: 0.9rem;
-      transition: 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: #B4523C;
-    }
-
-    /* Hero Section with Circular Motion Gallery */
-    .hero {
-      padding: 140px 0 80px;
-      background: #FEF8F2;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .hero-content h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-
-    .hero-accent {
-      color: #B4523C;
-      border-bottom: 3px solid #EADBCE;
-      display: inline-block;
-    }
-
-    .hero-content p {
-      font-size: 1rem;
-      color: #4A4A4A;
-      margin: 20px 0 28px;
-      max-width: 90%;
-      line-height: 1.6;
-    }
-
-    .btn-primary {
-      background: #B4523C;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary:hover {
-      background: #8E3A28;
-      transform: translateY(-2px);
-    }
-
-    /* ===== CIRCULAR ROTATING GALLERY ===== */
-    .circular-gallery {
-      position: relative;
-      width: 100%;
-      height: 450px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .circle-track {
-      position: relative;
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      animation: rotateCircle 28s linear infinite;
-      transform-style: preserve-3d;
-    }
-
-    .circle-item {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.25);
-      border: 3px solid white;
-      background: #f0e2d6;
-      transition: transform 0.3s ease;
-    }
-
-    .circle-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Positioning each item in a perfect circle */
-    .circle-item:nth-child(1) { transform: rotate(0deg) translate(200px) rotate(0deg); }
-    .circle-item:nth-child(2) { transform: rotate(45deg) translate(200px) rotate(-45deg); }
-    .circle-item:nth-child(3) { transform: rotate(90deg) translate(200px) rotate(-90deg); }
-    .circle-item:nth-child(4) { transform: rotate(135deg) translate(200px) rotate(-135deg); }
-    .circle-item:nth-child(5) { transform: rotate(180deg) translate(200px) rotate(-180deg); }
-    .circle-item:nth-child(6) { transform: rotate(225deg) translate(200px) rotate(-225deg); }
-    .circle-item:nth-child(7) { transform: rotate(270deg) translate(200px) rotate(-270deg); }
-    .circle-item:nth-child(8) { transform: rotate(315deg) translate(200px) rotate(-315deg); }
-
-    @keyframes rotateCircle {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Hover pause effect */
-    .circle-track:hover {
-      animation-play-state: paused;
-    }
-
-    .circle-item:hover {
-      transform: scale(1.08) rotate(0deg) !important;
-      z-index: 20;
-      transition: 0.2s;
-      box-shadow: 0 25px 35px -10px black;
-    }
-
-    /* Responsive circular gallery */
-    @media (max-width: 880px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .hero-content p {
-        max-width: 100%;
-      }
-      .circle-track {
-        width: 280px;
-        height: 280px;
-      }
-      .circle-item {
-        width: 90px;
-        height: 90px;
-      }
-      .circle-item:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
-      .circle-item:nth-child(2) { transform: rotate(45deg) translate(150px) rotate(-45deg); }
-      .circle-item:nth-child(3) { transform: rotate(90deg) translate(150px) rotate(-90deg); }
-      .circle-item:nth-child(4) { transform: rotate(135deg) translate(150px) rotate(-135deg); }
-      .circle-item:nth-child(5) { transform: rotate(180deg) translate(150px) rotate(-180deg); }
-      .circle-item:nth-child(6) { transform: rotate(225deg) translate(150px) rotate(-225deg); }
-      .circle-item:nth-child(7) { transform: rotate(270deg) translate(150px) rotate(-270deg); }
-      .circle-item:nth-child(8) { transform: rotate(315deg) translate(150px) rotate(-315deg); }
-    }
-
-    /* Other sections */
-    .featured-badge {
-      padding: 40px 0;
-      background: white;
-      text-align: center;
-    }
-    .badge-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-    }
-    .badge {
-      background: #F5EFEA;
-      padding: 6px 18px;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: #3E2C24;
-    }
-
-    .services-section, .steps-section, .gallery-section, .contact-section {
-      padding: 80px 0;
-    }
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 16px;
-    }
-    .section-sub {
-      text-align: center;
-      color: #6B6B6B;
-      max-width: 600px;
-      margin: 0 auto 48px;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-    .service-card {
-      background: #FEFAF5;
-      padding: 28px;
-      border-radius: 28px;
-      text-align: center;
-      border: 1px solid #F2E9E2;
-    }
-    .service-card i {
-      font-size: 2rem;
-      color: #B4523C;
-      margin-bottom: 16px;
-    }
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 28px;
-      margin-top: 20px;
-    }
-    .step-item {
-      text-align: center;
-    }
-    .step-number {
-      width: 52px;
-      height: 52px;
-      background: #B4523C;
-      color: white;
-      font-weight: 700;
-      font-size: 1.4rem;
-      border-radius: 60px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-    }
-    .gallery-card {
-      border-radius: 24px;
-      overflow: hidden;
-      background: #FEFAF5;
-    }
-    .gallery-card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-    }
-    .upload-zone {
-      border: 1.5px dashed #CDBAAA;
-      border-radius: 24px;
-      padding: 18px;
-      text-align: center;
-      background: #FEFCF9;
-      cursor: pointer;
-      margin-bottom: 20px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 12px 18px;
-      border: 1px solid #E1D7CF;
-      border-radius: 28px;
-      margin-bottom: 14px;
-      font-family: 'Inter', sans-serif;
-    }
-    .preview-area {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .preview-img {
-      width: 70px;
-      height: 70px;
-      object-fit: cover;
-      border-radius: 16px;
-    }
-    footer {
-      background: #1A1A1A;
-      color: #CEC6BF;
-      text-align: center;
-      padding: 40px;
-    }
-    .toast-msg {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #2C2C2C;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 50px;
-      opacity: 0;
-      transition: 0.2s;
-      z-index: 2000;
-      font-size: 0.85rem;
-      pointer-events: none;
-    }
-    @media (max-width: 680px) {
-      .container {
-        padding: 0 20px;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <div class="logo"><i class="fas fa-scissors"></i> Barbara's Elegance</div>
-  <ul class="nav-links">
-    <li><a href="#services">Atelier</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#gallery">Portfolio</a></li>
-    <li><a href="#contact">Commission</a></li>
-  </ul>
-</nav>
-
-<!-- HERO section with circular motion gallery: "Your catalog, instantly re-shot" -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <h1>Your wardrobe, <span class="hero-accent">instantly re‑imagined.</span></h1>
-      <p>Bespoke tailoring & AI‑enhanced design studio — from traditional elegance to modern cuts. Upload inspiration, get a custom quote within hours.</p>
-      <a href="#contact" class="btn-primary"><i class="fas fa-pen-ruler"></i> Start your project</a>
-    </div>
-    <div class="circular-gallery">
-      <div class="circle-track">
-        <div class="circle-item"><img src="https://placehold.co/400x400/e7d5c6/B4523C?text=Kaba+Style" alt="Kaba"></div>
-        <div class="circle-item"><img src="https://placehold.co/400x400/f0e1d4/B4523C?text=Wedding+Gown" alt="Gown"></div>
-        <div class="circle-item"><img src="https://placehold.co/400x400/dccbbc/B4523C?text=Agbada" alt="Agbada"></div>
-        <div class="circle-item"><img src="https://placehold.co/400x400/f1e2d5/B4523C?text=Bridesmaid" alt="Bridesmaid"></div>
-        <div class="circle-item"><img src="https://placehold.co/400x400/e6d2c2/B4523C?text=Kaftan" alt="Kaftan"></div>
-        <div class="circle-item"><img src="https://placehold.co/400x400/f3e7dd/B4523C?text=Curtains" alt="Home"></div>
-        <div class="circle-item"><img src="https://placehold.co/400x400/dbcabb/B4523C?text=Accessories" alt="Accessory"></div>
-        <div class="circle-item"><img src="https://placehold.co/400x400/f5e9e0/B4523C?text=Uniform" alt="Uniform"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Badge row: traditional + bridal etc -->
-<div class="featured-badge">
-  <div class="badge-group">
-    <span class="badge">👘 Traditional Regalia</span>
-    <span class="badge">💍 Bridal Couture</span>
-    <span class="badge">🏠 Home Textiles</span>
-    <span class="badge">👔 Corporate Uniforms</span>
-    <span class="badge">✂️ Alterations</span>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section id="services" class="services-section">
-  <div class="container">
-    <h2 class="section-title">What we craft</h2>
-    <div class="section-sub">Made-to-measure pieces with heirloom quality & modern precision</div>
-    <div class="services-grid">
-      <div class="service-card"><i class="fas fa-crown"></i><h3>Traditional Regalia</h3><p>Kaba & Slit, Kaftans, Agbada, Kente styles — handcrafted with heritage techniques.</p></div>
-      <div class="service-card"><i class="fas fa-dove"></i><h3>Bridal Couture</h3><p>Custom wedding gowns, bridesmaids, mother-of-the-bride with couture finish.</p></div>
-      <div class="service-card"><i class="fas fa-building"></i><h3>Corporate Uniforms</h3><p>School, church, business — tailored, durable, and branded elegantly.</p></div>
-      <div class="service-card"><i class="fas fa-magic"></i><h3>Alterations & Restorations</h3><p>Resizing, zippers, remodeling, and vintage restoration.</p></div>
-      <div class="service-card"><i class="fas fa-home"></i><h3>Home Furnishings</h3><p>Curtains, luxury pillows, table runners, throws.</p></div>
-      <div class="service-card"><i class="fas fa-bag-shopping"></i><h3>Custom Accessories</h3><p>Bags, headwraps, aprons, personalized gifts.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 4-STEP PROCESS -->
-<section id="process" class="steps-section" style="background:#FEFAF6;">
-  <div class="container">
-    <h2 class="section-title">From inspiration to masterpiece</h2>
-    <div class="section-sub">Your vision, our craftsmanship — seamless four‑step journey</div>
-    <div class="steps-grid">
-      <div class="step-item"><div class="step-number">01</div><h3>Share inspiration</h3><p>Upload sketches, photos or describe your dream piece.</p></div>
-      <div class="step-item"><div class="step-number">02</div><h3>Design preview</h3><p>We create moodboards & tech sketches — you approve direction.</p></div>
-      <div class="step-item"><div class="step-number">03</div><h3>Tailoring & fitting</h3><p>Master craftsmanship, sustainable fabrics, live/virtual fitting.</p></div>
-      <div class="step-item"><div class="step-number">04</div><h3>Final delivery</h3><p>Finished garment, styled and ready for any occasion.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY SECTION -->
-<section id="gallery" class="gallery-section">
-  <div class="container">
-    <h2 class="section-title">From the sewing diary</h2>
-    <div class="section-sub">Real commissions — each piece tells a love story</div>
-    <div class="gallery-grid">
-      <div class="gallery-card"><img src="https://placehold.co/600x700/e7d5c6/B4523C?text=Kaba+Slit" alt="Kaba"><div class="gallery-caption" style="padding:12px;"><strong>Emerald Kaba & Slit</strong><p>Hand‑beaded, traditional engagement</p></div></div>
-      <div class="gallery-card"><img src="https://placehold.co/600x700/f0e1d4/B4523C?text=Gown" alt="Gown"><div class="gallery-caption" style="padding:12px;"><strong>Celestial Wedding Gown</strong><p>French lace, cathedral train</p></div></div>
-      <div class="gallery-card"><img src="https://placehold.co/600x700/dccbbc/B4523C?text=Agbada" alt="Agbada"><div class="gallery-caption" style="padding:12px;"><strong>Royal Agbada</strong><p>Brocade & hand embroidery</p></div></div>
-      <div class="gallery-card"><img src="https://placehold.co/600x700/f1e2d5/B4523C?text=Bridesmaids" alt="Bridesmaids"><div class="gallery-caption" style="padding:12px;"><strong>Terracotta Bridal Party</strong><p>Sustainable silk blend</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT + UPLOAD + WHATSAPP + SHEETS -->
-<section id="contact" class="contact-section">
-  <div class="container contact-grid">
-    <div>
-      <h2 style="font-size: 1.8rem;">Start your bespoke order</h2>
-      <p style="margin: 16px 0 24px;">Describe your dream piece, share references — we respond within 24h via WhatsApp.</p>
-      <div class="contact-item" style="display:flex; gap:12px; margin-bottom:16px;"><i class="fas fa-phone-alt"></i> <span>+233 54 654 7782</span></div>
-      <div class="contact-item" style="display:flex; gap:12px; margin-bottom:16px;"><i class="fab fa-whatsapp"></i> <span>+233 54 654 7782 (Chat)</span></div>
-      <div class="contact-item" style="display:flex; gap:12px; margin-bottom:16px;"><i class="fas fa-envelope"></i> <span>barbara@elegancestitches.com</span></div>
-      <div class="contact-item" style="display:flex; gap:12px; margin-bottom:16px;"><i class="fas fa-map-pin"></i> <span>Agona Swedru, Central Region, Ghana</span></div>
-      <div style="background:#F3E9E1; border-radius: 24px; padding: 20px; margin-top: 30px;">
-        <i class="fas fa-feather-alt"></i> <strong>Tailoring process:</strong> Consultation → Sketch → Fabric selection → Fittings → Final handover. Worldwide shipping.
-      </div>
-    </div>
-
-    <div style="background: white; border-radius: 32px; padding: 28px; box-shadow: 0 12px 28px rgba(0,0,0,0.05);">
-      <div class="upload-zone" id="uploadTrigger">
-        <label style="cursor:pointer; display: flex; flex-direction: column; gap: 6px;">
-          <i class="fas fa-cloud-upload-alt" style="font-size: 28px;"></i>
-          <span><strong>Upload style references</strong> (max 5)</span>
-          <span style="font-size:12px;">JPEG/PNG up to 2MB each</span>
-        </label>
-        <input type="file" id="inspireImages" multiple accept="image/jpeg,image/png" style="display:none;">
-        <div id="previewList" class="preview-area"></div>
-      </div>
-
-      <form id="orderForm">
-        <input type="text" id="fullName" placeholder="Full name *" required>
-        <input type="tel" id="phoneNumber" placeholder="WhatsApp / Phone *" required>
-        <input type="email" id="emailAddress" placeholder="Email address">
-        <textarea id="orderDetails" rows="3" placeholder="Garment type, fabric, measurements, deadline, special requests *" required></textarea>
-        <input type="hidden" id="imagesBase64Payload">
-        <button type="submit" class="btn-primary" style="width:100%; justify-content: center; background:#B4523C;"><i class="fab fa-whatsapp"></i> Send order & get quote</button>
-      </form>
-      <div style="margin-top: 24px; border-radius: 20px; overflow: hidden; height: 160px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.488828161997!2d-1.009655!3d5.791355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf6c4f2b5e8e2b%3A0x3f4e2b1a6d9c8f0!2sAgona%20Swedru!5e0!3m2!1sen!2sgh!4v1656000000000!5m2!1sen!2sgh" loading="lazy" style="width:100%; height:100%; border:0;"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p><i class="fas fa-needle"></i> Barbara's Elegance Stitches — where heritage meets modern tailoring</p>
-  <p style="margin-top: 12px;">© 2026 • Bespoke fashion • Agona Swedru • Worldwide orders</p>
-</footer>
-
-<div id="globalToast" class="toast-msg"><i class="fas fa-check-circle"></i> <span id="toastText">Order sent!</span></div>
-
-<script>
-  // IMAGE UPLOAD (Base64, preview, max 5)
-  const fileInput = document.getElementById('inspireImages');
-  const previewDiv = document.getElementById('previewList');
-  let imagesBase64Array = [];
-
-  document.getElementById('uploadTrigger').addEventListener('click', () => fileInput.click());
-
-  fileInput.addEventListener('change', function(e) {
-    const files = Array.from(e.target.files);
-    if (imagesBase64Array.length + files.length > 5) {
-      showToastMsg("⚠️ Maximum 5 images allowed", "#b95c3a");
-      return;
-    }
-    files.forEach(file => {
-      if (file.size > 2 * 1024 * 1024) {
-        showToastMsg(`❌ ${file.name} exceeds 2MB`, "#b13b3b");
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        imagesBase64Array.push(ev.target.result);
-        updatePreviewImages();
-        document.getElementById('imagesBase64Payload').value = JSON.stringify(imagesBase64Array);
-      };
-      reader.readAsDataURL(file);
-    });
-    fileInput.value = '';
-  });
-
-  function updatePreviewImages() {
-    previewDiv.innerHTML = '';
-    imagesBase64Array.forEach((base64, idx) => {
-      const wrapper = document.createElement('div');
-      wrapper.style.position = 'relative';
-      const img = document.createElement('img');
-      img.src = base64;
-      img.className = 'preview-img';
-      const removeBtn = document.createElement('span');
-      removeBtn.innerHTML = '✕';
-      removeBtn.style.position = 'absolute';
-      removeBtn.style.top = '-8px';
-      removeBtn.style.right = '-8px';
-      removeBtn.style.background = '#B4523C';
-      removeBtn.style.color = 'white';
-      removeBtn.style.borderRadius = '30px';
-      removeBtn.style.width = '20px';
-      removeBtn.style.height = '20px';
-      removeBtn.style.display = 'flex';
-      removeBtn.style.alignItems = 'center';
-      removeBtn.style.justifyContent = 'center';
-      removeBtn.style.fontSize = '12px';
-      removeBtn.style.cursor = 'pointer';
-      removeBtn.onclick = (e) => {
-        e.stopPropagation();
-        imagesBase64Array.splice(idx, 1);
-        document.getElementById('imagesBase64Payload').value = JSON.stringify(imagesBase64Array);
-        updatePreviewImages();
-      };
-      wrapper.appendChild(img);
-      wrapper.appendChild(removeBtn);
-      previewDiv.appendChild(wrapper);
-    });
-  }
-
-  function showToastMsg(message, bgColor = "#2C2C2C") {
-    const toast = document.getElementById('globalToast');
-    document.getElementById('toastText').innerText = message;
-    toast.style.background = bgColor;
-    toast.style.opacity = '1';
-    setTimeout(() => toast.style.opacity = '0', 3500);
-  }
-
-  // ========== GOOGLE SHEETS APPS SCRIPT BACKEND ==========
-  // REPLACE WITH YOUR ACTUAL DEPLOYED URL
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxz99kYadwrLDRjSkOpnSdW-lN-RKXaU9qzEpcxE-yPdZUz6-fFMDU5XbuZPhQ2emCg7w/exec";
-
-  async function submitToSheet(payload) {
-    try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(payload),
-        headers: { 'Content-Type': 'application/json' }
-      });
-      return true;
-    } catch(e) { console.warn(e); return false; }
-  }
-
-  function sendWhatsAppNotification(orderData) {
-    const businessNumber = "233546547782";
-    const imgNote = imagesBase64Array.length ? `📸 (${imagesBase64Array.length} reference images)` : "📷 No images";
-    const message = `🪡 *NEW BESPOKE ORDER* 🪡\n\n👤 Client: ${orderData.name}\n📞 Phone: ${orderData.phone}\n✉️ Email: ${orderData.email || "N/A"}\n📝 Details: ${orderData.details.substring(0, 200)}\n🖼️ ${imgNote}\n\n📍 Studio: Agona Swedru. Please provide quote & timeline.`;
-    const waLink = `https://wa.me/${businessNumber}?text=${encodeURIComponent(message)}`;
-    window.open(waLink, '_blank');
-  }
-
-  // FORM SUBMIT
-  const orderForm = document.getElementById('orderForm');
-  orderForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const fullName = document.getElementById('fullName').value.trim();
-    const phoneNumber = document.getElementById('phoneNumber').value.trim();
-    const emailAddr = document.getElementById('emailAddress').value.trim();
-    const orderDetails = document.getElementById('orderDetails').value.trim();
-
-    if (!fullName || !phoneNumber || !orderDetails) {
-      showToastMsg("❌ Please fill Name, Phone and Order details.", "#b13b3b");
-      return;
-    }
-    if (phoneNumber.length < 8) {
-      showToastMsg("📞 Enter a valid phone number", "#b13b3b");
-      return;
-    }
-
-    const submitBtn = orderForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Sending...';
-    submitBtn.disabled = true;
-
-    const imagesData = document.getElementById('imagesBase64Payload').value;
-    const payload = {
-      timestamp: new Date().toISOString(),
-      name: fullName,
-      phone: phoneNumber,
-      email: emailAddr,
-      orderDetails: orderDetails,
-      imagesCount: imagesBase64Array.length,
-      imagesBase64Data: imagesData,
-      source: "Barbara Elegance - Circular Motion"
-    };
-
-    await submitToSheet(payload);
-    sendWhatsAppNotification({ name: fullName, phone: phoneNumber, email: emailAddr, details: orderDetails });
-
-    showToastMsg("✅ Order sent! We'll reply via WhatsApp shortly.", "#2e6732");
-    // reset form
-    document.getElementById('fullName').value = '';
-    document.getElementById('phoneNumber').value = '';
-    document.getElementById('emailAddress').value = '';
-    document.getElementById('orderDetails').value = '';
-    imagesBase64Array = [];
-    updatePreviewImages();
-    document.getElementById('imagesBase64Payload').value = '';
-
-    submitBtn.innerHTML = originalText;
-    submitBtn.disabled = false;
-  });
-</script>
-</body>
-</html>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Barber Studio</title> 
+ 
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght @300;400;500;600&display=swap" rel="stylesheet"> 
+ 
+<style> 
+*{     margin:0;     padding:0; 
+    box-sizing:border-box; 
+} 
+ 
+body{ 
+    font-family:'Inter',sans-serif;     background:#111; 
+    color:#fff;     line-height:1.6; 
+} 
+ 
+.container{     width:90%;     max-width:1200px;     margin:auto; 
+} 
+ 
+header{ 
+    position:fixed;     top:0;     width:100%;     z-index:1000; 
+    background:rgba(0,0,0,.9); 
+} 
+ 
+nav{ 
+    display:flex;     justify-content:space-between; align-items:center; padding:20px 0; 
+} 
+ 
+.logo{     font-size:28px;     font-family:'Oswald',sans-serif;     color:#d4a017; 
+} 
+ 
+nav ul{     display:flex;     list-style:none;     gap:25px; 
+} 
+ 
+nav a{     color:white;     text-decoration:none; 
+} 
+ 
+.hero{     height:100vh;     background: 
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),     url('https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?q=80&w=1400');     background-size:cover;     background-position:center;     display:flex;     align-items:center; 
+} 
+ 
+.hero-content h1{     font-family:'Oswald',sans-serif;     font-size:70px;     margin-bottom:20px; 
+} 
+ 
+.hero-content p{     max-width:600px;     margin-bottom:30px; 
+} 
+ 
+.btn{ display:inline-block; padding:15px 35px;     background:#d4a017; 
+    color:#fff;     text-decoration:none;     border-radius:5px; 
+} 
+ 
+section{     padding:100px 0; 
+} 
+ 
+.section-title{     text-align:center;     margin-bottom:50px; 
+} 
+ 
+.section-title h2{     font-family:'Oswald',sans-serif;     font-size:42px;     color:#d4a017; 
+} 
+ 
+.about{     display:grid;     grid-template-columns:1fr 1fr;     gap:40px;     align-items:center; 
+} 
+ 
+.about img{     width:100%;     border-radius:10px; 
+} 
+ 
+.services-grid{     display:grid;     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));     gap:25px; 
+} 
+ 
+.service-card{     background:#1b1b1b;     padding:30px; border-radius:10px; text-align:center; 
+} 
+ 
+.service-card h3{     color:#d4a017;     margin-bottom:15px; 
+} 
+ 
+.gallery{     display:grid;     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));     gap:20px; 
+} 
+ 
+.gallery img{     width:100%;     height:300px;     object-fit:cover;     border-radius:10px; 
+} 
+ 
+.team{     display:grid;     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));     gap:25px; 
+} 
+ 
+.member{ 
+    text-align:center; 
+} 
+ 
+.member img{     width:100%;     border-radius:10px; 
+} 
+ 
+.member h3{     margin-top:15px; 
+} 
+ 
+.contact{     text-align:center; 
+} 
+ 
+.contact form{ 
+    max-width:600px;     margin:auto; 
+} 
+ 
+.contact input, .contact textarea{     width:100%;     padding:15px;     margin-bottom:15px;     background:#1b1b1b;     border:none;     color:white; 
+} 
+ 
+footer{     background:#000;     text-align:center;     padding:30px; 
+} 
+ 
+@media(max-width:768px){ 
+ 
+.hero-content h1{     font-size:48px; 
+} 
+ 
+.about{ 
+    grid-template-columns:1fr; 
+} 
+ 
+nav ul{     display:none; 
+} 
+} 
+</style> 
+</head> 
+<body> 
+ 
+<header> 
+<div class="container"> 
+<nav> 
+<div class="logo">BARBER STUDIO</div> 
+<ul> 
+<li><a href="#">Home</a></li> 
+<li><a href="#about">About</a></li> 
+<li><a href="#services">Services</a></li> 
+<li><a href="#gallery">Gallery</a></li> 
+<li><a href="#contact">Contact</a></li> 
+</ul> 
+</nav> 
+</div> 
+</header> 
+ 
+<section class="hero"> 
+<div class="container hero-content"> 
+<h1>Premium Grooming Experience</h1> 
+<p>Modern cuts, beard trims and premium grooming services for gentlemen.</p> 
+<a href="#contact" class="btn">Book Appointment</a> 
+</div> 
+</section> 
+ 
+<section id="about"> 
+<div class="container"> 
+<div class="section-title"> 
+<h2>About Us</h2> 
+</div> 
+ 
+<div class="about"> 
+<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200"> 
+ 
+<div> 
+<h3>Professional Barber Shop</h3> 
+<p> 
+We combine classic barbering techniques with modern styles to create the perfect look for every client. 
+</p> 
+<br> 
+<a href="#" class="btn">Learn More</a> 
+</div> 
+</div> 
+</div> 
+</section> 
+ 
+<section id="services"> 
+<div class="container"> 
+<div class="section-title"> 
+<h2>Services</h2> 
+</div> 
+ 
+<div class="services-grid"> 
+ 
+<div class="service-card"> 
+<h3>Hair Cut</h3> 
+<p>Modern and classic styles.</p> 
+</div> 
+ 
+<div class="service-card"> 
+<h3>Beard Trim</h3> 
+<p>Professional beard shaping.</p> 
+</div> 
+ 
+<div class="service-card"> 
+<h3>Hot Towel Shave</h3> 
+<p>Luxury shaving experience.</p> 
+</div> 
+ 
+<div class="service-card"> 
+<h3>Hair Coloring</h3> 
+<p>Premium color treatments.</p> 
+</div> 
+ 
+</div> 
+</div> 
+</section> 
+ 
+<section id="gallery"> 
+<div class="container"> 
+<div class="section-title"> 
+<h2>Gallery</h2> 
+</div> 
+ 
+<div class="gallery"> 
+<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186"> 
+<img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c"> 
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1"> 
+<img src="https://images.unsplash.com/photo-1512690459411-b0fd1c86b8c8"> </div> 
+ 
+</div> 
+</section> 
+ 
+<section> 
+<div class="container"> 
+<div class="section-title"> 
+<h2>Our Barbers</h2> 
+</div> 
+ 
+<div class="team"> 
+ 
+<div class="member"> 
+<img src="https://randomuser.me/api/portraits/men/32.jpg"> 
+<h3>Michael</h3> 
+<p>Senior Barber</p> 
+</div> 
+ 
+<div class="member"> 
+<img src="https://randomuser.me/api/portraits/men/45.jpg"> 
+<h3>Daniel</h3> 
+<p>Master Stylist</p> 
+</div> 
+ 
+<div class="member"> 
+<img src="https://randomuser.me/api/portraits/men/60.jpg"> 
+<h3>James</h3> 
+<p>Beard Specialist</p> 
+</div> 
+ 
+</div> 
+</div> 
+</section> 
+ 
+<section id="contact"> 
+<div class="container"> 
+<div class="section-title"> 
+<h2>Book Appointment</h2> 
+</div> 
+ 
+<div class="contact"> 
+<form id="bookingForm"> 
+<input type="text" placeholder="Full Name" required> 
+<input type="email" placeholder="Email Address" required> 
+<input type="tel" placeholder="Phone Number"> 
+<textarea rows="5" placeholder="Message"></textarea> 
+<button class="btn" type="submit">Submit</button> 
+</form> 
+</div> 
+ 
+</div> 
+</section> 
+ 
+<footer> 
+<p>© 2026 Barber Studio. All Rights Reserved.</p> 
+</footer> 
+ 
+<script> document.getElementById("bookingForm") .addEventListener("submit", function(e){ e.preventDefault(); alert("Booking submitted!"); 
+}); 
+</script> 
+ 
+</body> 
+</html> 
