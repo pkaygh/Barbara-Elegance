@@ -1,268 +1,865 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>ADOM BEE's FASHION Studio</title> 
- 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght @300;400;500;600&display=swap" rel="stylesheet"> 
- 
-<style> 
-*{     margin:0;     padding:0; 
-    box-sizing:border-box; 
-} 
- 
-body{ 
-    font-family:'Inter',sans-serif;     background:#111; 
-    color:#fff;     line-height:1.6; 
-} 
- 
-.container{     width:90%;     max-width:1200px;     margin:auto; 
-} 
- 
-header{ 
-    position:fixed;     top:0;     width:100%;     z-index:1000; 
-    background:rgba(0,0,0,.9); 
-} 
- 
-nav{ 
-    display:flex;     justify-content:space-between; align-items:center; padding:20px 0; 
-} 
- 
-.logo{     font-size:28px;     font-family:'Oswald',sans-serif;     color:#d4a017; 
-} 
- 
-nav ul{     display:flex;     list-style:none;     gap:25px; 
-} 
- 
-nav a{     color:white;     text-decoration:none; 
-} 
- 
-.hero{     height:100vh;     background: 
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),     url('https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?q=80&w=1400');     background-size:cover;     background-position:center;     display:flex;     align-items:center; 
-} 
- 
-.hero-content h1{     font-family:'Oswald',sans-serif;     font-size:70px;     margin-bottom:20px; 
-} 
- 
-.hero-content p{     max-width:600px;     margin-bottom:30px; 
-} 
- 
-.btn{ display:inline-block; padding:15px 35px;     background:#d4a017; 
-    color:#fff;     text-decoration:none;     border-radius:5px; 
-} 
- 
-section{     padding:100px 0; 
-} 
- 
-.section-title{     text-align:center;     margin-bottom:50px; 
-} 
- 
-.section-title h2{     font-family:'Oswald',sans-serif;     font-size:42px;     color:#d4a017; 
-} 
- 
-.about{     display:grid;     grid-template-columns:1fr 1fr;     gap:40px;     align-items:center; 
-} 
- 
-.about img{     width:100%;     border-radius:10px; 
-} 
- 
-.services-grid{     display:grid;     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));     gap:25px; 
-} 
- 
-.service-card{     background:#1b1b1b;     padding:30px; border-radius:10px; text-align:center; 
-} 
- 
-.service-card h3{     color:#d4a017;     margin-bottom:15px; 
-} 
- 
-.gallery{     display:grid;     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));     gap:20px; 
-} 
- 
-.gallery img{     width:100%;     height:300px;     object-fit:cover;     border-radius:10px; 
-} 
- 
-.team{     display:grid;     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));     gap:25px; 
-} 
- 
-.member{ 
-    text-align:center; 
-} 
- 
-.member img{     width:100%;     border-radius:10px; 
-} 
- 
-.member h3{     margin-top:15px; 
-} 
- 
-.contact{     text-align:center; 
-} 
- 
-.contact form{ 
-    max-width:600px;     margin:auto; 
-} 
- 
-.contact input, .contact textarea{     width:100%;     padding:15px;     margin-bottom:15px;     background:#1b1b1b;     border:none;     color:white; 
-} 
- 
-footer{     background:#000;     text-align:center;     padding:30px; 
-} 
- 
-@media(max-width:768px){ 
- 
-.hero-content h1{     font-size:48px; 
-} 
- 
-.about{ 
-    grid-template-columns:1fr; 
-} 
- 
-nav ul{     display:none; 
-} 
-} 
-</style> 
-</head> 
-<body> 
- 
-<header> 
-<div class="container"> 
-<nav> 
-<div class="logo">ADOM BEE's FASHION STUDIO</div> 
-<ul> 
-<li><a href="#">Home</a></li> 
-<li><a href="#about">About</a></li> 
-<li><a href="#services">Services</a></li> 
-<li><a href="#gallery">Gallery</a></li> 
-<li><a href="#contact">Contact</a></li> 
-</ul> 
-</nav> 
-</div> 
-</header> 
- 
-<section class="hero"> 
-<div class="container hero-content"> 
-<h1>Premium Tailoring</h1> 
-<p>Custom-made traditional wear, corporate attire and expect alterations crafted to fit your style and personality.</p> 
-<a href="#contact" class="btn">Book Appointment</a> 
-</div> 
-</section> 
- 
-<section id="about"> 
-<div class="container"> 
-<div class="section-title"> 
-<h2>About Us</h2> 
-</div> 
- 
-<div class="about"> 
-<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200"> 
- 
-<div> 
-<h3>Professional Fashion Shop</h3> 
-<p> 
-We combine classic traditional tailoring techniques with modern styles to create the perfect look for every client. 
-</p> 
-<br> 
-<a href="#" class="btn">Learn More</a> 
-</div> 
-</div> 
-</div> 
-</section> 
- 
-<section id="services"> 
-<div class="container"> 
-<div class="section-title"> 
-<h2>Services</h2> 
-</div> 
- 
-<div class="services-grid"> 
- 
-<div class="service-card"> 
-<h3>Men's Tailoring</h3> 
-<p>Shirts, trousers, kaftans and modern men's fashion with perfect fitting.</p> 
-</div> 
- 
-<div class="service-card"> 
-<h3>Women's Fashion</h3> 
-<p>Elegant dresses, gowns, garments, slit and kaba, shirts, blouses.</p> 
-</div> 
- 
-<div class="service-card"> 
-<h3>Alterations & Repairs</h3> 
-<p>We resize, restyle, and repair clothes including zips, hems, waists adjustments and mending.</p> 
-</div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>ADOM BEE's FASHION Studio | Premium Bespoke Tailoring</title>
 
-<div class="service-card"> 
-<h3>Bridal & Special Wear</h3> 
-<p>Wedding gowns, bridasmaids dresses, engagement outfits and special event fashion designs.</p> 
-</div> 
+<!-- Fonts: Clean modern sans-serif -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<div class="service-card"> 
-<h3>Uniform Tailoring</h3> 
-<p>School uniforms, church uniforms, corperate wear, and branded clothing for organizations.</p> 
-</div> 
- 
-</div> 
-</div> 
-</section> 
- 
-<section id="gallery"> 
-<div class="container"> 
-<div class="section-title"> 
-<h2>Gallery</h2> 
-</div> 
- 
-<div class="gallery"> 
-<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186"> 
-<img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c"> 
-<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1"> 
-<img src="https://images.unsplash.com/photo-1512690459411-b0fd1c86b8c8"> </div> 
- 
-</div> 
-</section> 
- 
-<section> 
-<div class="container"> 
-<div class="section-title"> 
-<h2>Our Lead Craft Woman</h2> 
-</div> 
- 
-<div class="team"> 
- 
-<div class="member"> 
-<img src="https://randomuser.me/api/portraits/men/32.jpg"> 
-<h3>Barbara</h3> 
-<p>CEO</p> 
-</div> 
- 
-</div> 
-</div> 
-</section> 
- 
-<section id="contact"> 
-<div class="container"> 
-<div class="section-title"> 
-<h2>Book Appointment</h2> 
-</div> 
- 
-<div class="contact"> 
-<form id="bookingForm"> 
-<input type="text" placeholder="Full Name" required> 
-<input type="email" placeholder="Email Address" required> 
-<input type="tel" placeholder="Phone Number"> 
-<textarea rows="5" placeholder="Message"></textarea> 
-<button class="btn" type="submit">Submit</button> 
-</form> 
-</div> 
- 
-</div> 
-</section> 
- 
-<footer> 
-<p>© 2026 Adom BEE's Studio. All Rights Reserved.</p> 
-</footer> 
- 
-<script> document.getElementById("bookingForm") .addEventListener("submit", function(e){ e.preventDefault(); alert("Booking submitted!"); 
-}); 
-</script> 
- 
-</body> 
-</html> 
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #ffffff;
+    color: #1a2c3e;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ========== COLOR THEME: White, Orange (#f39c12), Navy Blue (#1a2c3e) ========== */
+:root {
+    --navy: #1a2c3e;
+    --navy-light: #243b52;
+    --orange: #f39c12;
+    --orange-dark: #e67e22;
+    --orange-light: #fef5e6;
+    --white: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray: #6c7a89;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eef2f6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+nav a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+/* Hero Section */
+.hero {
+    height: 95vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f8 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 70px;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+    color: var(--orange);
+}
+
+.hero-content p {
+    max-width: 550px;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.25s;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.btn:hover {
+    background: var(--orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: var(--orange);
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 85px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2:after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: var(--orange);
+    margin: 14px auto 0;
+    border-radius: 3px;
+}
+
+/* About Section */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    min-height: 380px;
+    background: var(--gray-light);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--orange);
+}
+
+.image-placeholder {
+    text-align: center;
+    color: var(--gray);
+}
+
+.image-placeholder i {
+    font-size: 58px;
+    margin-bottom: 12px;
+    color: var(--orange);
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: var(--navy);
+}
+
+.about-text p {
+    margin-bottom: 25px;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.25s;
+    border: 1px solid #eef2f8;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--orange);
+    box-shadow: 0 20px 30px -12px rgba(26, 44, 62, 0.1);
+}
+
+.service-card i {
+    font-size: 48px;
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    margin-bottom: 14px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 280px;
+    background: var(--gray-light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--orange);
+    transition: 0.2s;
+}
+
+.gallery-placeholder {
+    text-align: center;
+    color: var(--gray);
+}
+
+.gallery-placeholder i {
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: var(--orange);
+}
+
+/* Team */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    justify-items: center;
+}
+
+.member {
+    text-align: center;
+    max-width: 300px;
+}
+
+.member-image {
+    width: 100%;
+    height: 310px;
+    background: var(--gray-light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--orange);
+    margin-bottom: 20px;
+}
+
+.member h3 {
+    margin-top: 18px;
+    font-size: 1.4rem;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.member p {
+    color: var(--orange);
+    font-weight: 500;
+}
+
+/* Contact / Booking Form */
+.contact-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 42px 38px;
+    border-radius: 32px;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eef2f8;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--gray-light);
+    border: 1px solid #e2e8f0;
+    color: var(--navy);
+    border-radius: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: 0.2s;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+}
+
+/* Image Upload Zone */
+.upload-zone {
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 5px 0 20px;
+    background: var(--gray-light);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.upload-zone:hover {
+    border-color: var(--orange);
+    background: #fffaf2;
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--orange);
+    font-weight: 500;
+}
+
+.upload-label i {
+    font-size: 36px;
+    color: var(--orange);
+}
+
+.preview-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.preview-img-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid var(--orange);
+    background: white;
+}
+
+.remove-preview {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--orange);
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.btn-submit {
+    width: 100%;
+    background: var(--orange);
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.whatsapp-hint {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.whatsapp-hint i {
+    color: #25D366;
+    margin-right: 4px;
+}
+
+/* Toast */
+.toast-notify {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--navy);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    z-index: 2000;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    font-size: 0.85rem;
+}
+
+.toast-notify.show {
+    opacity: 1;
+    transform: translateY(-8px);
+}
+
+footer {
+    background: var(--navy);
+    color: #cbd5e1;
+    text-align: center;
+    padding: 38px 20px;
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 42px;
+    }
+    
+    .about {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 30px;
+    }
+    
+    .contact-form-container {
+        padding: 28px 20px;
+    }
+    
+    .hero {
+        margin-top: 60px;
+        height: auto;
+        min-height: 85vh;
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">ADOM BEE's <span>FASHION</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Book</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container hero-content">
+        <h1>Premium <span>Tailoring</span><br>For The Distinct</h1>
+        <p>Custom-made traditional wear, corporate attire, and expert alterations — crafted to fit your style and personality.</p>
+        <a href="#contact" class="btn"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Us</h2>
+        </div>
+        <div class="about">
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-camera"></i>
+                    <p>Your Image Here</p>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Where Craftsmanship Meets Style</h3>
+                <p>We combine classic traditional tailoring techniques with modern aesthetics to create the perfect look for every client. With years of experience and passion for detail, we ensure every piece fits flawlessly and reflects your unique personality.</p>
+                <a href="#contact" class="btn"><i class="fab fa-whatsapp"></i> Start Your Order</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card"><i class="fas fa-user-tie"></i><h3>Men's Tailoring</h3><p>Shirts, trousers, kaftans and modern fashion with perfect fitting.</p></div>
+            <div class="service-card"><i class="fas fa-female"></i><h3>Women's Fashion</h3><p>Elegant dresses, gowns, slit and kaba, blouses, custom designs.</p></div>
+            <div class="service-card"><i class="fas fa-cut"></i><h3>Alterations & Repairs</h3><p>Resizing, zippers, hems, waist adjustments, and mending.</p></div>
+            <div class="service-card"><i class="fas fa-heart"></i><h3>Bridal & Special Wear</h3><p>Wedding gowns, bridesmaids, engagement and event fashion.</p></div>
+            <div class="service-card"><i class="fas fa-tshirt"></i><h3>Uniform Tailoring</h3><p>School, church, corporate uniforms and branded clothing.</p></div>
+            <div class="service-card"><i class="fas fa-home"></i><h3>Home Furnishings</h3><p>Curtains, pillow covers, table runners, custom textiles.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Gallery</h2>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-image"></i><p>Your Image</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-image"></i><p>Your Image</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-image"></i><p>Your Image</p></div></div>
+            <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-image"></i><p>Your Image</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Lead Craftswoman -->
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Lead Craftswoman</h2>
+        </div>
+        <div class="team">
+            <div class="member">
+                <div class="member-image">
+                    <div class="image-placeholder"><i class="fas fa-user-circle"></i><p>Barbara's Photo</p></div>
+                </div>
+                <h3>Barbara Adom</h3>
+                <p>Master Tailor & Creative Director</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Section: WhatsApp Only + Image Upload -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Book Appointment</h2>
+        </div>
+        <div class="contact-form-container">
+            <form id="bookingForm">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                
+                <!-- WhatsApp Number (replaces phone + email) -->
+                <div class="form-group">
+                    <label>WhatsApp Number *</label>
+                    <input type="tel" id="whatsappNumber" placeholder="e.g., 233XXXXXXXXX" required>
+                    <small style="color:#6c7a89; font-size:12px;">We'll reach you on WhatsApp for confirmation</small>
+                </div>
+                
+                <!-- Tailoring details -->
+                <div class="form-group">
+                    <label>Tell us about your tailoring needs *</label>
+                    <textarea id="orderDetails" rows="3" placeholder="Describe garment type, fabric, measurements, deadline, or special requests..." required></textarea>
+                </div>
+                
+                <!-- IMAGE UPLOAD SECTION (below message) -->
+                <div class="form-group">
+                    <label>Upload reference picture (optional)</label>
+                    <div class="upload-zone" id="uploadTrigger">
+                        <label class="upload-label" for="inspireImage">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span><strong>Click to upload inspiration photo</strong></span>
+                            <span style="font-size:12px;">JPEG/PNG up to 2MB</span>
+                        </label>
+                        <input type="file" id="inspireImage" accept="image/jpeg,image/png,image/jpg" style="display:none;">
+                        <div id="previewContainer" class="preview-area"></div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-submit"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                <div class="whatsapp-hint">
+                    <i class="fab fa-whatsapp"></i> We'll confirm your booking within 2 hours
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Adom BEE's Fashion Studio. All Rights Reserved. | Bespoke Tailoring Excellence</p>
+</footer>
+
+<div id="liveToast" class="toast-notify">
+    <i class="fas fa-check-circle"></i> <span id="toastMsg">Booking request sent!</span>
+</div>
+
+<script>
+    // ---------- IMAGE UPLOAD (single image preview) ----------
+    const imageInput = document.getElementById('inspireImage');
+    const previewContainer = document.getElementById('previewContainer');
+    let uploadedImageBase64 = null;
+
+    document.getElementById('uploadTrigger').addEventListener('click', () => imageInput.click());
+
+    imageInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        if (file.size > 2 * 1024 * 1024) {
+            showToast("❌ Image exceeds 2MB limit", "#e67e22");
+            imageInput.value = '';
+            return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+            uploadedImageBase64 = ev.target.result;
+            updateSinglePreview();
+        };
+        reader.readAsDataURL(file);
+    });
+
+    function updateSinglePreview() {
+        previewContainer.innerHTML = '';
+        if (!uploadedImageBase64) return;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'preview-img-wrapper';
+        const img = document.createElement('img');
+        img.src = uploadedImageBase64;
+        img.className = 'preview-img';
+        const removeBtn = document.createElement('span');
+        removeBtn.innerHTML = '✕';
+        removeBtn.className = 'remove-preview';
+        removeBtn.onclick = (e) => {
+            e.stopPropagation();
+            uploadedImageBase64 = null;
+            imageInput.value = '';
+            updateSinglePreview();
+        };
+        wrapper.appendChild(img);
+        wrapper.appendChild(removeBtn);
+        previewContainer.appendChild(wrapper);
+    }
+
+    // Toast notification
+    function showToast(message, bgColor = "#1a2c3e") {
+        const toast = document.getElementById('liveToast');
+        document.getElementById('toastMsg').innerText = message;
+        toast.style.backgroundColor = bgColor;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+
+    // ---------- GOOGLE SHEETS APPS SCRIPT (backend) ----------
+    // IMPORTANT: Replace with your actual Google Apps Script Web App URL
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxz99kYadwrLDRjSkOpnSdW-lN-RKXaU9qzEpcxE-yPdZUz6-fFMDU5XbuZPhQ2emCg7w/exec";
+    
+    async function submitToGoogleSheets(payload) {
+        if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("YOUR_SCRIPT_ID")) {
+            console.log("Sheet URL not configured");
+            return false;
+        }
+        try {
+            await fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            return true;
+        } catch(err) {
+            console.error(err);
+            return false;
+        }
+    }
+    
+    // WhatsApp notification to business (using the WhatsApp number provided)
+    function sendWhatsAppNotification(customerName, customerWhatsApp, orderText, hasImage) {
+        // Business WhatsApp number (replace with your actual number, digits only, no '+')
+        const BUSINESS_WA = "233 54 654 7782";
+        
+        const imageNote = hasImage ? "📸 (Reference image attached in submission)" : "📷 No image uploaded";
+        const message = `🪡 *NEW BOOKING REQUEST* 🪡\n\n👤 Name: ${customerName}\n📞 WhatsApp: ${customerWhatsApp}\n📝 Request: ${orderText.substring(0, 220)}\n🖼️ ${imageNote}\n\n📍 Please confirm appointment with client.`;
+        const encodedMsg = encodeURIComponent(message);
+        const waLink = `https://wa.me/${BUSINESS_WA}?text=${encodedMsg}`;
+        window.open(waLink, '_blank');
+    }
+    
+    // ---------- FORM SUBMIT ----------
+    const bookingForm = document.getElementById('bookingForm');
+    
+    bookingForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const fullName = document.getElementById('fullName').value.trim();
+        const whatsappNumber = document.getElementById('whatsappNumber').value.trim();
+        const orderDetails = document.getElementById('orderDetails').value.trim();
+        
+        if (!fullName || !whatsappNumber || !orderDetails) {
+            showToast("❌ Please fill Name, WhatsApp Number, and order details", "#e67e22");
+            return;
+        }
+        
+        // Basic WhatsApp number validation
+        const cleanNumber = whatsappNumber.replace(/\D/g, '');
+        if (cleanNumber.length < 9) {
+            showToast("❌ Please enter a valid WhatsApp number", "#e67e22");
+            return;
+        }
+        
+        const submitBtn = bookingForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Prepare data for Google Sheets
+        const sheetPayload = {
+            timestamp: new Date().toISOString(),
+            name: fullName,
+            whatsapp: whatsappNumber,
+            orderDetails: orderDetails,
+            hasImage: !!uploadedImageBase64,
+            imageBase64: uploadedImageBase64 || "",
+            source: "Adom BEE's Fashion Website"
+        };
+        
+        // Send to Google Sheets (if configured)
+        await submitToGoogleSheets(sheetPayload);
+        
+        // Send WhatsApp notification to business (opens chat)
+        sendWhatsAppNotification(fullName, whatsappNumber, orderDetails, !!uploadedImageBase64);
+        
+        showToast("✅ Booking sent! We'll reply on WhatsApp shortly.", "#2e7d32");
+        
+        // Reset form
+        document.getElementById('fullName').value = '';
+        document.getElementById('whatsappNumber').value = '';
+        document.getElementById('orderDetails').value = '';
+        uploadedImageBase64 = null;
+        imageInput.value = '';
+        updateSinglePreview();
+        
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    });
+</script>
+
+</body>
+</html>
