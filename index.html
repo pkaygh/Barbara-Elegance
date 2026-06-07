@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Barbara's Elegance Stitches | Bespoke Fashion & Tailoring Atelier</title>
+<title>Barbara's Elegance Stitches | Bespoke Fashion & Tailoring Studio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -501,7 +501,7 @@ footer {
   <div class="logo"><i class="fas fa-scissors"></i> Barbara's Elegance</div>
   <ul>
     <li><a href="#story">Story</a></li>
-    <li><a href="#services">Atelier</a></li>
+    <li><a href="#services">studio</a></li>
     <li><a href="#gallery">Portfolio</a></li>
     <li><a href="#contact">Commission</a></li>
   </ul>
@@ -516,7 +516,7 @@ footer {
       <a href="#contact" class="btn-primary"><i class="fas fa-pen-fancy"></i> Request a commission</a>
     </div>
     <div class="hero-image">
-      <img src="https://placehold.co/800x600/f0e2d6/b54545?text=Barbara's+Atelier" alt="Barbara tailoring masterpiece">
+      <img src="https://placehold.co/800x600/f0e2d6/b54545?text=Barbara's+Studio" alt="Barbara tailoring masterpiece">
     </div>
   </div>
 </section>
@@ -526,9 +526,9 @@ footer {
   <div class="container story-inner">
     <div class="story-text">
       <h2>The art of fine sewing</h2>
-      <p>For over a decade, Barbara has dressed generations — from bridal whispers to royal kente. Each stitch carries the warmth of Ghanaian craftsmanship fused with contemporary silhouettes. Our atelier is a sanctuary for those who believe clothing should tell a story.</p>
+      <p>For over a decade, Barbara has dressed generations — from bridal whispers to royal kente. Each stitch carries the warmth of Ghanaian craftsmanship fused with contemporary silhouettes. Our Studio is a sanctuary for those who believe clothing should tell a story.</p>
       <p>We specialize in translating your vision into wearable poetry: whether it's a custom wedding gown that captures your spirit, a bold kaftan for a milestone celebration, or curated home furnishings that bring texture to your space. Sustainability meets luxury — we use premium fabrics and zero-waste cutting techniques.</p>
-      <div class="signature">— Barbara Mensah, Creative Director</div>
+      <div class="signature">— Barbara Bimpong, Creative Director</div>
     </div>
     <div class="story-img">
       <img src="https://placehold.co/700x500/e8d9cd/b54545?text=Barbara+at+Work" alt="Barbara hand stitching fabric">
@@ -539,10 +539,10 @@ footer {
 <!-- Services (enhanced design) -->
 <section id="services" class="services-section">
   <div class="container">
-    <h2 class="section-title">The Atelier Offerings</h2>
+    <h2 class="section-title">The Studio Offerings</h2>
     <div class="section-sub">From ceremonial masterpieces to everyday essentials — each piece is made-to-measure.</div>
     <div class="services-grid">
-      <div class="service-card"><i class="fas fa-crown"></i><h3>Traditional Regalia</h3><p>Kaba & Slit, Kaftans, Agbadas, Smocks, Kente reinventions.</p></div>
+      <div class="service-card"><i class="fas fa-crown"></i><h3>Traditional Regalia</h3><p>Kaba & Slit, Kaftans, Gown, Garment, Smocks, Kente reinventions.</p></div>
       <div class="service-card"><i class="fas fa-dove"></i><h3>Bridal Couture</h3><p>Bespoke wedding gowns, bridesmaids, mother-of-the-bride elegance.</p></div>
       <div class="service-card"><i class="fas fa-users"></i><h3>Uniforms & Corporate</h3><p>School, church, business uniforms with branding finesse.</p></div>
       <div class="service-card"><i class="fas fa-magic"></i><h3>Alterations & Heirlooms</h3><p>Resizing, remodeling, zippers, and vintage restoration.</p></div>
@@ -716,7 +716,7 @@ footer {
     const imagesCount = imagesBase64Array.length;
     const imageNote = imagesCount ? `📸 (${imagesCount} reference image${imagesCount > 1 ? 's' : ''} attached)` : "📷 No reference images";
     const orderText = orderData.details.substring(0, 210);
-    const fullMsg = `🪡 *NEW BESPOKE ORDER* 🪡\n\n👤 Client: ${orderData.name}\n📞 Contact: ${orderData.phone}\n✉️ Email: ${orderData.email || "N/A"}\n📝 Request: ${orderText}\n🖼️ ${imageNote}\n\n📍 Location: Agona Swedru Atelier. Kindly revert with timeline & quote.`;
+    const fullMsg = `🪡 *NEW BESPOKE ORDER* 🪡\n\n👤 Client: ${orderData.name}\n📞 Contact: ${orderData.phone}\n✉️ Email: ${orderData.email || "N/A"}\n📝 Request: ${orderText}\n🖼️ ${imageNote}\n\n📍 Location: Agona Swedru Studio. Kindly revert with timeline & quote.`;
     const waLink = `https://wa.me/${businessNumber}?text=${encodeURIComponent(fullMsg)}`;
     window.open(waLink, '_blank');
   }
